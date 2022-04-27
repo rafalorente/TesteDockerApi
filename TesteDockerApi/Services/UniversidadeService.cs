@@ -17,7 +17,7 @@ namespace TesteDockerApi.Services
             _universidade = mongoDbContext.DB.GetCollection<Universidade>("Universidade");
         }
 
-        public async Task<IEnumerable<Universidade>> GetTeste()
+        public async Task<IEnumerable<Universidade>> GetUniversidadeBrasilMongoDb()
         {
             return await _universidade.AsQueryable().ToListAsync();
         }

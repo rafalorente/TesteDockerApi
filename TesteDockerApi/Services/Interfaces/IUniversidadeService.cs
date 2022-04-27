@@ -6,6 +6,6 @@ namespace TesteDockerApi.Services.Interfaces
 {
     public interface IUniversidadeService
     {
-        Task<IEnumerable<Universidade>> GetTeste();
+        Task<IEnumerable<Universidade>> GetUniversidadeBrasilMongoDb();
     }
 }

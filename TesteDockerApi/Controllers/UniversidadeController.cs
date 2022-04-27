@@ -28,12 +28,12 @@ namespace TesteDockerApi.Controllers
 
 
         // Get para ser usado direto no mongoDB
-        [HttpGet]
-        public async Task<ActionResult<IAsyncEnumerable<Universidade>>> GetTeste()
+        [HttpGet("GetUniversidadeBrasilMongoDb")]
+        public async Task<ActionResult<IAsyncEnumerable<Universidade>>> GetUniversidadeBrasilMongoDb()
         {
             try
             {
-                var universidade = await _universidadeService.GetTeste();
+                var universidade = await _universidadeService.GetUniversidadeBrasilMongoDb();
                 return Ok(universidade);
             }
             catch 
@@ -41,8 +41,6 @@ namespace TesteDockerApi.Controllers
                 return BadRequest("Request inválido");
             }
         }
-
-
 
         // Get para ser usado direto pela URL
         [HttpGet("GetUniversidadePorPais")]
